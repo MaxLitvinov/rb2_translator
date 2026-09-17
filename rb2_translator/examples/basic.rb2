@@ -1,0 +1,24 @@
+# Обчислення суми та середнього n введених чисел
+n = gets.to_i
+sum = 0.0
+count = 0
+
+for i in 1..n
+  x = gets.to_f
+  if x < 0.0
+    puts "negative value skipped"
+    next
+  end
+  sum += x
+  count += 1
+end
+
+if count > 0
+  avg = sum / count
+  print "sum = "
+  puts sum
+  print "avg = "
+  puts avg
+else
+  puts "no data"
+end

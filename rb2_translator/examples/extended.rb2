@@ -1,0 +1,40 @@
+# Демонстрація усіх конструкцій мови RB2
+n = gets.to_i
+k = 0
+p = 1
+b1 = n > 0
+b2 = n >= 0
+b3 = b1 && !b2
+title = "report"
+puts title
+
+while n > 1
+  if n % 2 == 0
+    n = n / 2
+  else
+    n = 3 * n + 1
+  end
+  k += 1
+  if k > 1000
+    break
+  end
+end
+puts k
+
+for j in 1..10
+  p *= 2
+  x = p ** 2
+  y = -(x + x) / 2.0 * (-10.0)
+  puts j
+  puts x
+  puts y
+end
+
+i = 10
+until i == 0
+  i -= 1
+end
+puts i
+puts b1
+puts b2
+puts b3
